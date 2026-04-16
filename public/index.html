@@ -44,8 +44,7 @@
 
   /* LANDING */
   #screen-landing { justify-content:center; text-align:center; gap:1.5rem; }
-  .landing-prism { display:flex; justify-content:center; align-items:center; }
-  .landing-prism svg { filter:drop-shadow(0 0 18px rgba(91,157,181,0.35)); animation:breathe 4s ease-in-out infinite; }
+  .landing-symbol { font-size:4.5rem; line-height:1; text-align:center; animation:breathe 4s ease-in-out infinite; filter:drop-shadow(0 0 16px rgba(61,138,168,0.2)); }
   @keyframes breathe { 0%,100%{transform:scale(1);opacity:.9} 50%{transform:scale(1.05);opacity:1} }
   .landing-title    { font-family:'Cinzel',serif; font-size:clamp(1.4rem,5vw,2.1rem); font-weight:600; color:var(--accent-lt); letter-spacing:.07em; line-height:1.3; }
   .landing-subtitle { font-size:1.05rem; font-style:italic; color:var(--text-dim); max-width:360px; line-height:1.6; }
@@ -53,8 +52,7 @@
   .mode-grid { display:flex; flex-direction:column; gap:.85rem; width:100%; max-width:420px; }
   .mode-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1.2rem 1.4rem; cursor:pointer; transition:all .25s ease; text-align:left; display:flex; align-items:flex-start; gap:1.1rem; box-shadow:0 1px 4px rgba(30,45,69,0.07); }
   .mode-card:hover { background:rgba(61,138,168,0.06); border-color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 24px rgba(61,138,168,0.12); }
-  .mode-card-icon { flex-shrink:0; width:2.4rem; height:2.4rem; margin-top:.1rem; display:flex; align-items:center; justify-content:center; }
-  .mode-card-icon svg { width:100%; height:100%; }
+  .mode-card-icon { font-size:2rem; flex-shrink:0; line-height:1; margin-top:.1rem; }
   .mode-card-title { font-family:'Cinzel',serif; font-size:1rem; color:var(--accent-lt); margin-bottom:.3rem; }
   .mode-card-desc  { font-size:.9rem; font-style:italic; color:var(--text-dim); line-height:1.5; }
 
@@ -301,21 +299,7 @@
      LANDING
 ══════════════════════════════ -->
 <div id="screen-landing" class="screen active">
-  <div class="landing-prism">
-    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Prism triangle -->
-      <polygon points="40,8 72,68 8,68" stroke="#3d8aa8" stroke-width="2" fill="rgba(61,138,168,0.06)" stroke-linejoin="round"/>
-      <!-- Incoming beam -->
-      <line x1="62" y1="12" x2="51" y2="34" stroke="#3d8aa8" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-      <!-- Rainbow fan from prism face -->
-      <line x1="51" y1="34" x2="72" y2="38" stroke="#e05555" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-      <line x1="51" y1="34" x2="73" y2="44" stroke="#e09040" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-      <line x1="51" y1="34" x2="72" y2="50" stroke="#d4c840" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-      <line x1="51" y1="34" x2="70" y2="55" stroke="#55b855" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-      <line x1="51" y1="34" x2="66" y2="60" stroke="#5b9db5" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-      <line x1="51" y1="34" x2="60" y2="64" stroke="#8855cc" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-    </svg>
-  </div>
+  <div class="landing-symbol">🌈</div>
   <div>
     <div class="landing-title">The Supervision Council</div>
     <div style="font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.15em;color:var(--text-dim);text-align:center;margin-top:.4rem;text-transform:uppercase">Collective wisdom for reflexive practice</div>
@@ -325,17 +309,7 @@
   <div class="mode-grid fade-in">
 
     <div class="mode-card" onclick="goTo('sp-case')">
-      <div class="mode-card-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Open notebook -->
-          <rect x="7" y="8" width="26" height="24" rx="2" stroke="#3d8aa8" stroke-width="2.2" fill="none"/>
-          <line x1="20" y1="8" x2="20" y2="32" stroke="#3d8aa8" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/>
-          <line x1="23" y1="15" x2="30" y2="15" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round"/>
-          <line x1="23" y1="20" x2="30" y2="20" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round"/>
-          <line x1="23" y1="25" x2="28" y2="25" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round"/>
-          <path d="M11 14 L16 22 L13 27" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-      </div>
+      <div class="mode-card-icon">🌱</div>
       <div>
         <div class="mode-card-title">Supervision Prep</div>
         <div class="mode-card-desc">Preparing for a human supervision session? Articulate what you're bringing, surface what matters most, and arrive ready.</div>
@@ -343,17 +317,7 @@
     </div>
 
     <div class="mode-card" onclick="goTo('ss-case')">
-      <div class="mode-card-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Head circle -->
-          <circle cx="20" cy="14" r="7" stroke="#3d8aa8" stroke-width="2.2" fill="none"/>
-          <!-- Shoulders -->
-          <path d="M8 34 Q8 26 20 26 Q32 26 32 34" stroke="#3d8aa8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-          <!-- Inward-curving arrow suggesting reflection -->
-          <path d="M26 12 Q30 8 28 4 Q24 6 24 10" stroke="#3d8aa8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-          <polyline points="22,9 24,10 23,12" stroke="#3d8aa8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-      </div>
+      <div class="mode-card-icon">🌿</div>
       <div>
         <div class="mode-card-title">Self-Supervision</div>
         <div class="mode-card-desc">Describe what you're bringing. The app reads it, selects the most relevant perspectives, and surfaces questions tailored to your situation.</div>
@@ -361,19 +325,7 @@
     </div>
 
     <div class="mode-card" onclick="goTo('screen-role')">
-      <div class="mode-card-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Left figure -->
-          <circle cx="10" cy="11" r="4.5" stroke="#3d8aa8" stroke-width="2" fill="none"/>
-          <path d="M3 32 Q3 23 10 23 Q17 23 17 32" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <!-- Right figure -->
-          <circle cx="30" cy="11" r="4.5" stroke="#3d8aa8" stroke-width="2" fill="none"/>
-          <path d="M23 32 Q23 23 30 23 Q37 23 37 32" stroke="#3d8aa8" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <!-- Centre figure -->
-          <circle cx="20" cy="9" r="5" stroke="#3d8aa8" stroke-width="2.2" fill="none"/>
-          <path d="M12 34 Q12 24 20 24 Q28 24 28 34" stroke="#3d8aa8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
+      <div class="mode-card-icon">🌳</div>
       <div>
         <div class="mode-card-title">Group Supervision</div>
         <div class="mode-card-desc">A coached case explored by a group, each person holding one animal perspective. Roles: Client, Supervisor, Observers.</div>
@@ -381,18 +333,7 @@
     </div>
 
     <div class="mode-card" onclick="goTo('screen-explore')">
-      <div class="mode-card-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Magnifying glass -->
-          <circle cx="17" cy="17" r="10" stroke="#3d8aa8" stroke-width="2.2" fill="none"/>
-          <line x1="24" y1="24" x2="34" y2="34" stroke="#3d8aa8" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Paw print inside lens -->
-          <circle cx="17" cy="19" r="3" stroke="#3d8aa8" stroke-width="1.8" fill="none"/>
-          <circle cx="12" cy="14" r="1.8" stroke="#3d8aa8" stroke-width="1.5" fill="none"/>
-          <circle cx="17" cy="12" r="1.8" stroke="#3d8aa8" stroke-width="1.5" fill="none"/>
-          <circle cx="22" cy="14" r="1.8" stroke="#3d8aa8" stroke-width="1.5" fill="none"/>
-        </svg>
-      </div>
+      <div class="mode-card-icon">🍃</div>
       <div>
         <div class="mode-card-title">Explore the Animals</div>
         <div class="mode-card-desc">Meet all twelve animal perspectives, understand what each notices, and see how they work together across the four supervisory domains.</div>
@@ -400,16 +341,7 @@
     </div>
 
     <div class="mode-card" onclick="goTo('screen-about')">
-      <div class="mode-card-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Information circle -->
-          <circle cx="20" cy="20" r="14" stroke="#3d8aa8" stroke-width="2.2" fill="none"/>
-          <!-- i dot -->
-          <circle cx="20" cy="13" r="1.8" fill="#3d8aa8"/>
-          <!-- i stem -->
-          <line x1="20" y1="18" x2="20" y2="29" stroke="#3d8aa8" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </div>
+      <div class="mode-card-icon">🌾</div>
       <div>
         <div class="mode-card-title">About this App</div>
         <div class="mode-card-desc">What this app is, what it can honestly offer, and what it cannot replace.</div>
@@ -792,6 +724,13 @@
     <div id="ss-clarify-questions"></div>
   </div>
 
+  <div class="clarify-questions fade-in">
+    <div class="clarify-q-label">Your response</div>
+    <textarea class="clarify-area" id="ss-clarify-response" placeholder="Add anything that sharpens the picture, or leave blank if the summary captures it well…" rows="4"></textarea>
+  </div>
+
+  <div class="clarify-nudge fade-in">You can leave the response blank if the summary captures it well.</div>
+
   <div class="clarify-outcome-block fade-in">
     <div class="clarify-outcome-label">Your outcome for this session</div>
     <div class="clarify-outcome-q">What does a good outcome from this session look like for you?</div>
@@ -802,13 +741,6 @@
     <div class="advice-alert-title">A note on supervision</div>
     <div class="advice-alert-body">Supervision works differently from consultancy or mentoring. Your supervisor won't tell you what to do, but will work with you to gain perspective, surface what you already know, and identify options. You might want to reframe what you're hoping for with that in mind.</div>
   </div>
-
-  <div class="clarify-questions fade-in">
-    <div class="clarify-q-label">Your response</div>
-    <textarea class="clarify-area" id="ss-clarify-response" placeholder="Add anything that sharpens the picture, or leave blank if the summary captures it well…" rows="4"></textarea>
-  </div>
-
-  <div class="clarify-nudge fade-in">You can leave the response blank if the summary captures it well.</div>
 
   <div style="display:flex;gap:.75rem;width:100%;margin-top:.5rem" class="fade-in">
     <button class="btn btn-ghost" style="flex:1" onclick="goTo('ss-case')">← Edit case</button>
@@ -934,6 +866,13 @@
     <div id="sp-clarify-questions"></div>
   </div>
 
+  <div class="clarify-questions fade-in">
+    <div class="clarify-q-label">Your response</div>
+    <textarea class="clarify-area" id="sp-clarify-response" placeholder="Add anything that sharpens the picture, or leave blank if the summary captures it well…" rows="4"></textarea>
+  </div>
+
+  <div class="clarify-nudge fade-in">You can leave the response blank if the summary captures it well.</div>
+
   <div class="clarify-outcome-block fade-in">
     <div class="clarify-outcome-label">Your outcome for this session</div>
     <div class="clarify-outcome-q">What does a good outcome from this supervision session look like for you?</div>
@@ -944,13 +883,6 @@
     <div class="advice-alert-title">A note on supervision</div>
     <div class="advice-alert-body">Supervision works differently from consultancy or mentoring. Your supervisor won't tell you what to do, but will work with you to gain perspective, surface what you already know, and identify options. You might want to reframe what you're hoping for with that in mind.</div>
   </div>
-
-  <div class="clarify-questions fade-in">
-    <div class="clarify-q-label">Your response</div>
-    <textarea class="clarify-area" id="sp-clarify-response" placeholder="Add anything that sharpens the picture, or leave blank if the summary captures it well…" rows="4"></textarea>
-  </div>
-
-  <div class="clarify-nudge fade-in">You can leave the response blank if the summary captures it well.</div>
 
   <div style="display:flex;gap:.75rem;width:100%;margin-top:.5rem" class="fade-in">
     <button class="btn btn-ghost" style="flex:1" onclick="goTo('sp-case')">← Edit case</button>
@@ -985,7 +917,7 @@
 
   <div class="somatic-prompt fade-in" style="background:rgba(35,60,100,0.12);border-color:rgba(91,157,181,0.25)">
     <div class="somatic-title" style="color:#88a8c4">My intention going into supervision</div>
-    <div class="somatic-body">Having thought through these perspectives, what is the most important thing you want to bring into the room? What do you most need your supervisor to know?</div>
+    <div class="somatic-body">Having thought through these perspectives, what is the most important thing you want to bring to supervision? What do you most need your supervisor to know?</div>
     <textarea class="somatic-area" id="sp-intention-input" style="border-color:rgba(91,157,181,0.2)" placeholder="What I most want my supervisor to know is…" rows="3"></textarea>
   </div>
 
@@ -1025,7 +957,7 @@ const ANIMALS = {
     focus:'The possibility of real change and what it would take',
     notices:'the client\'s vision of the future, limiting beliefs, the coach\'s own sense of possibility, transformational potential being underseen',
     hint:'Use this perspective when the work feels small relative to what might be possible, or when the client seems constrained by a narrow view of their own potential.',
-    questions:['What is the boldest version of what this client could achieve, and what stands between them and it?','Is the coaching oriented towards real transformation, or just incremental adjustment?','What does the client most deeply want, beneath what they are asking for?','Where is my own sense of possibility and ambition in relation to this person and this work?'],
+    questions:['What is the boldest version of what this client could achieve, and what stands between them and it?','Is the coaching oriented towards real transformation, or just incremental adjustment?','What does the client most deeply want, beneath what they are asking for?'],
     blind:'Beware grandiosity, inflation of what is possible, or losing sight of the ground beneath ambitious vision.',
     color:'rgba(35,70,60,0.5)' },
 
@@ -1033,7 +965,7 @@ const ANIMALS = {
     focus:'The edge of learning and growth',
     notices:'collusion, comfort zones, unspoken issues, stuck patterns',
     hint:'Use this perspective when you suspect you or the client may be playing safe, or when something important is going unsaid.',
-    questions:['Where am I playing safe in this work?','What is not being said, by me or by the client?','What risk do I need to take in the next session?','What are we both carefully avoiding?'],
+    questions:['Where am I playing safe in this work?','What is not being said, by me or by the client?','What risk do I need to take in the next session?'],
     blind:'Beware overwhelming, damaging trust, or pushing too hard.',
     color:'rgba(110,55,30,0.5)' },
 
@@ -1041,7 +973,7 @@ const ANIMALS = {
     focus:'What I actually do in sessions',
     notices:'interventions, questions, structure, tactics, micro-skills',
     hint:'Use this perspective when you want to focus on craft: what you\'re actually doing in the room and what you might try differently.',
-    questions:['What could I try differently in the next session?','What small experiment would stretch my practice?','Which of my recent interventions landed, and which didn\'t, and why?','What am I defaulting to that I should question?'],
+    questions:['What could I try differently in the next session?','What small experiment would stretch my practice?','Which of my recent interventions landed, and which didn\'],
     blind:'Beware becoming scattered, superficial, or under-theorised.',
     color:'rgba(35,60,100,0.5)' },
 
@@ -1050,7 +982,7 @@ const ANIMALS = {
     focus:'The coaching and supervision frame',
     notices:'boundaries, role clarity, scope of practice, ethics, contracting',
     hint:'Use this perspective when something feels unclear about the contract, scope, or ethics of the work.',
-    questions:['Is this still coaching? Is the contract clear and being held?','Where do boundaries need tightening?','Are there ethical or safeguarding edges here?','Is the scope of this work well-defined and appropriate?'],
+    questions:['Is this still coaching? Is the contract clear and being held?','Where do boundaries need tightening?','Are there ethical or safeguarding edges here?'],
     blind:'Beware becoming rigid, overly procedural, or risk-averse.',
     color:'rgba(60,80,110,0.5)' },
 
@@ -1058,7 +990,7 @@ const ANIMALS = {
     focus:'What is being seen clearly, and what is being obscured',
     notices:'vagueness, avoidance of specificity, things being named obliquely or not at all, what the coach observes but doesn\'t say',
     hint:'Use this perspective when something is going unnamed: when the work is obscured by vagueness, politeness, or imprecision, or when the coach has an observation they are not voicing.',
-    questions:['What am I seeing in this case that I am not yet saying out loud?','Where is vagueness or polite indirection preventing the work from sharpening?','What is the most precise way to name what is actually happening here?','What would it mean to call this exactly as it is, and what is stopping me?'],
+    questions:['What am I seeing in this case that I am not yet saying out loud?','Where is vagueness or polite indirection preventing the work from sharpening?','What is the most precise way to name what is actually happening here?'],
     blind:'Beware bluntness that wounds without purpose, or precision that serves the coach\'s need for clarity more than the client\'s need for care.',
     color:'rgba(80,60,25,0.5)' },
 
@@ -1066,7 +998,7 @@ const ANIMALS = {
     focus:'Who the coach is most loyal to, and whether that loyalty is serving the work',
     notices:'professional duty, unconscious allegiances to client, sponsor, organisation or ideology, protective instincts, questions of power and difference, whose interests are really being served',
     hint:'Use this perspective when you want to examine where your loyalty is sitting in this system, and whether it is fully in service of the client\'s growth, or pulled by other forces including cultural, institutional, or identity-based ones.',
-    questions:['Whose interests am I most loyal to in this coaching system: the client, the sponsor, the organisation, or my own professional comfort?','Where is my sense of professional duty right now, and is it guiding me or constraining me?','What questions of power, difference, or identity are present in this work that I have not yet named?','Where might my fidelity to the client be tipping into collusion, over-protection, or loss of perspective?'],
+    questions:['Whose interests am I most loyal to in this coaching system: the client, the sponsor, the organisation, or my own professional comfort?','Where is my sense of professional duty right now, and is it guiding me or constraining me?','What questions of power, difference, or identity are present in this work that I have not yet named?'],
     blind:'Beware anxiety-driven vigilance, excessive protectiveness, or loyalty that prevents the coach from seeing the client clearly.',
     color:'rgba(70,50,30,0.5)' },
 
@@ -1075,7 +1007,7 @@ const ANIMALS = {
     focus:'The human and relational field',
     notices:'trust, vulnerability, emotional climate, pace, psychological safety',
     hint:'Use this perspective when you sense something in the relationship: trust, pace, exposure, that isn\'t being named.',
-    questions:['What does the relationship need to stay workable?','Where might someone feel exposed or defended?','Is the coach moving too fast or too hard?','What does the emotional climate tell us?'],
+    questions:['What does the relationship need to stay workable?','Where might someone feel exposed or defended?','Is the coach moving too fast or too hard?'],
     blind:'Beware avoiding necessary difficulty or colluding with comfort.',
     color:'rgba(90,55,100,0.5)' },
 
@@ -1083,7 +1015,7 @@ const ANIMALS = {
     focus:'What is tender, unspoken, or most deeply needed in this work',
     notices:'unmet needs, what the client cannot yet ask for, the coach\'s care and empathy, embodied and somatic responses, what is being carried quietly',
     hint:'Use this perspective when you sense there is something the client needs but has not named, or when the emotional and bodily texture of the work deserves more attention than it is getting.',
-    questions:['What does this client most need that they haven\'t yet been able to ask for?','Where is my care for this person, and is it clear-eyed or is it softening what needs to be seen?','What am I noticing in my own body as I think about this client, and what might that be telling me?','What would it mean to meet this client with genuine tenderness, not sentimentality, but real attentiveness to their struggle?'],
+    questions:['What does this client most need that they haven\',',',','],
     blind:'Beware becoming so focused on care and gentleness that challenge, honesty, and necessary friction are avoided.',
     color:'rgba(60,85,55,0.5)' },
 
@@ -1091,7 +1023,7 @@ const ANIMALS = {
     focus:'What is genuinely nourishing, and what is depleting, in this coaching',
     notices:'the meaning client and coach are making of the work, what genuinely sustains them, abundance and depletion, the coach\'s own relationship to fulfilment in the work',
     hint:'Use this perspective when you want to explore the deeper meaning dimension of the work: what truly sustains coach and client, and whether the coaching is attending to what matters most.',
-    questions:['What meaning is this client making of their experience, and is that meaning serving them?','What is genuinely nourishing about this work for both coach and client, and what is depleting it?','Is there a sense of sufficiency and abundance in the coaching, or is something important feeling scarce?','What matters most to this client, and is the coaching attending to that with enough weight?'],
+    questions:['What meaning is this client making of their experience, and is that meaning serving them?','What is genuinely nourishing about this work for both coach and client, and what is depleting it?','Is there a sense of sufficiency and abundance in the coaching, or is something important feeling scarce?'],
     blind:'Beware complacency, over-optimism, or an excessive focus on what feels good at the expense of what is true.',
     color:'rgba(70,35,55,0.5)' },
 
@@ -1100,7 +1032,7 @@ const ANIMALS = {
     focus:'What is being used, conserved, or depleted in this work',
     notices:'resourcefulness, over-reliance on one approach, depletion in coach or client, adaptive capacity, what has not yet been tried',
     hint:'Use this perspective when you sense either coach or client is running on empty, over-relying on a single strategy, or not drawing on the full range of what\'s available.',
-    questions:['What resources, inner, relational, practical, is the client actually drawing on?','Am I over-relying on one approach? What else is available to me?','Where is depletion showing up: in the coach, in the client, or in the work itself?','What adaptive moves have not yet been tried?'],
+    questions:['What resources, inner, relational, practical, is the client actually drawing on?','Am I over-relying on one approach? What else is available to me?','Where is depletion showing up: in the coach, in the client, or in the work itself?'],
     blind:'Beware becoming calculating, overly strategic, or transactional about what is fundamentally a relational endeavour.',
     color:'rgba(40,55,70,0.5)' },
 
@@ -1108,7 +1040,7 @@ const ANIMALS = {
     focus:'Understanding what is really going on, and what keeps recurring',
     notices:'patterns across cases, recurring dynamics, hypotheses, what the coach\'s own responses reveal, parallel process between coach-client and supervisee-supervisor relationships',
     hint:'Use this perspective when you sense a pattern recurring, in the client, in yourself, in how sessions keep going, or when you want to examine what might be playing out between you and your supervisor that mirrors the coaching relationship.',
-    questions:['What pattern keeps recurring in this work, and where else have I encountered it?','What hypotheses am I holding, and what might I be missing?','What is this situation stirring up in me, and what does that tell me?','Is there anything in how I am presenting this case to my supervisor that might mirror what is happening between me and my client?'],
+    questions:['What pattern keeps recurring in this work, and where else have I encountered it?','What hypotheses am I holding, and what might I be missing?','What is this situation stirring up in me, and what does that tell me?'],
     blind:'Beware overthinking, delaying action, or becoming so absorbed in pattern that direct response is avoided.',
     color:'rgba(35,65,55,0.5)' },
 
@@ -1116,7 +1048,7 @@ const ANIMALS = {
     focus:'Whether the coaching is going anywhere',
     notices:'drift, stagnation, loss of momentum, avoidance of change',
     hint:'Use this perspective when the coaching feels like it\'s circling or stalling, or when you\'ve lost a sense of direction.',
-    questions:['Is this coaching actually moving the client? Where?','Where is it stuck or going in circles?','What shift in direction or pace is needed from me?','Am I colluding with stagnation?'],
+    questions:['Is this coaching actually moving the client? Where?','Where is it stuck or going in circles?','What shift in direction or pace is needed from me?'],
     blind:'Beware rushing, destabilising, or burning containment and trust.',
     color:'rgba(100,35,45,0.5)' }
 };
@@ -1586,7 +1518,7 @@ ${buildAnimalList()}
 
 Supervisory domain identified from intake: ${domain}. ${domainHint}
 
-Select 2-3 perspectives most relevant to this coach's specific situation. Generate 4 questions per perspective, tailored to what they have written, not generic defaults. Keep each question to one sentence. Frame questions in the first person.
+Select 2-3 perspectives most relevant to this coach's specific situation. Generate 3 questions per perspective, tailored to what they have written, not generic defaults. Keep each question to one sentence. Frame questions in the first person.
 
 Return ONLY valid JSON, no markdown, no preamble:
 {
@@ -1594,8 +1526,8 @@ Return ONLY valid JSON, no markdown, no preamble:
   "lenses": [
     {
       "key": "tiger",
-      "reason": "One sentence explaining why this perspective is relevant to their specific situation.",
-      "questions": ["Q1?","Q2?","Q3?","Q4?"]
+      "reason": "One sentence explaining why this perspective is relevant, written directly to the coach using you/your, not the coach.",
+      "questions": ["Q1?","Q2?","Q3?"]
     }
   ]
 }
